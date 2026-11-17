@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Usuário - PetCare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <a href="index.html" class="logo">🐾 PetCare</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ofertas</a></li>
+                <li><a href="produto.html">Serviços</a></li>
+                <li><a href="new.html">Cadastro</a></li>
+                <li><a href="login.html">👤 Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="form-container">
+            <h2>👤+ Novo Cadastro</h2>
+            <form action="login.html" method="GET" style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Informe o seu e-mail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Informe o seu password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nome">Nome Completo do Tutor</label>
+                    <input type="text" id="nome" placeholder="Informe o seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="perfil">Tipo de Cadastro</label>
+                    <select id="perfil">
+                        <option value="tutor">Tutor Visitante</option>
+                        <option value="assinante">Clube PetCare (Assinante)</option>
+                        <option value="parceiro">Veterinário Parceiro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Espécie do seu Pet:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="especie" value="cao" checked> Cão</label>
+                        <label><input type="radio" name="especie" value="gato"> Gato</label>
+                        <label><input type="radio" name="especie" value="ambos"> Cão e Gato / Outros</label>
+                    </div>
+                </div>
+
+                <!-- Campos separados exigindo ambas as fotos -->
+                <div class="form-group">
+                    <label for="fotoTutor">Foto do Tutor (Obrigatório)</label>
+                    <input type="file" id="fotoTutor" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fotoPet">Foto do Pet (Obrigatório)</label>
+                    <input type="file" id="fotoPet" accept="image/*" required>
+                </div>
+
+                <button type="submit" class="btn">👤+ Criar conta</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <span class="logo" style="font-size: 0.95rem;">🐾 PetCare</span>
+            <p>A PetCare é uma clínica e pet shop dedicada à saúde, bem-estar e alegria do seu animal de estimação.</p>
+            <div class="social-links">
+                <span>FB</span>
+                <span>IG</span>
+                <span>TW</span>
+            </div>
+        </div>
+        <p>&copy; 2026 PetCare. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
