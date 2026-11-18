@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Clínica Veterinária e Pet Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">🐾 PetCare</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ofertas</a></li>
+                <li><a href="produto.html">Serviços</a></li>
+                <li><a href="new.html">Cadastro</a></li>
+                <li><a href="login.html">👤 Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="top-bar">
+                <div>
+                    <h1>Carinho e dedicação em cada detalhe para o seu melhor amigo.</h1>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Pesquise por nossos serviços" onkeyup="filtrarCards()">
+                </div>
+            </div>
+
+            <div class="grid-cards" id="cardsContainer">
+                <article class="card" data-nome="banho e tosa spa" data-preco="89,90">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=400&q=80" alt="Banho e Tosa">
+                    <div class="card-body">
+                        <span class="card-tag">📍 Estética</span>
+                        <h3>Banho e Tosa Spa</h3>
+                        <p class="card-details">Hidratação + Unhas</p>
+                        <div class="card-price-row">
+                            <span class="price">R$ 89,90</span>
+                            <div class="rating">
+                                <input type="radio" id="star5-1" name="rate1" value="5" onclick="confirmarAvaliacao(this)"><label for="star5-1">★</label>
+                                <input type="radio" id="star4-1" name="rate1" value="4" onclick="confirmarAvaliacao(this)"><label for="star4-1">★</label>
+                                <input type="radio" id="star3-1" name="rate1" value="3" onclick="confirmarAvaliacao(this)"><label for="star3-1">★</label>
+                                <input type="radio" id="star2-1" name="rate1" value="2" onclick="confirmarAvaliacao(this)"><label for="star2-1">★</label>
+                                <input type="radio" id="star1-1" name="rate1" value="1" onclick="confirmarAvaliacao(this)"><label for="star1-1">★</label>
+                            </div>
+                        </div>
+                        <a href="produto.html" class="btn">Saiba Mais</a>
+                    </div>
+                </article>
+
+                <article class="card" data-nome="check-up completo" data-preco="150,00">
+                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=400&q=80" alt="Consulta Veterinária">
+                    <div class="card-body">
+                        <span class="card-tag">📍 Clínica</span>
+                        <h3>Check-up Completo</h3>
+                        <p class="card-details">Exame + Hemograma</p>
+                        <div class="card-price-row">
+                            <span class="price">R$ 150,00</span>
+                            <div class="rating">
+                                <input type="radio" id="star5-2" name="rate2" value="5" onclick="confirmarAvaliacao(this)"><label for="star5-2">★</label>
+                                <input type="radio" id="star4-2" name="rate2" value="4" onclick="confirmarAvaliacao(this)"><label for="star4-2">★</label>
+                                <input type="radio" id="star3-2" name="rate2" value="3" onclick="confirmarAvaliacao(this)"><label for="star3-2">★</label>
+                                <input type="radio" id="star2-2" name="rate2" value="2" onclick="confirmarAvaliacao(this)"><label for="star2-2">★</label>
+                                <input type="radio" id="star1-2" name="rate2" value="1" onclick="confirmarAvaliacao(this)"><label for="star1-2">★</label>
+                            </div>
+                        </div>
+                        <a href="produto.html" class="btn">Saiba Mais</a>
+                    </div>
+                </article>
+
+                <article class="card" data-nome="creche e hotel pet" data-preco="110,00">
+                    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=400&q=80" alt="Creche e Hotel">
+                    <div class="card-body">
+                        <span class="card-tag">📍 Hotel</span>
+                        <h3>Creche e Hotel Pet</h3>
+                        <p class="card-details">Diária com Recreação</p>
+                        <div class="card-price-row">
+                            <span class="price">R$ 110,00</span>
+                            <div class="rating">
+                                <input type="radio" id="star5-3" name="rate3" value="5" onclick="confirmarAvaliacao(this)"><label for="star5-3">★</label>
+                                <input type="radio" id="star4-3" name="rate3" value="4" onclick="confirmarAvaliacao(this)"><label for="star4-3">★</label>
+                                <input type="radio" id="star3-3" name="rate3" value="3" onclick="confirmarAvaliacao(this)"><label for="star3-3">★</label>
+                                <input type="radio" id="star2-3" name="rate3" value="2" onclick="confirmarAvaliacao(this)"><label for="star2-3">★</label>
+                                <input type="radio" id="star1-3" name="rate3" value="1" onclick="confirmarAvaliacao(this)"><label for="star1-3">★</label>
+                            </div>
+                        </div>
+                        <a href="produto.html" class="btn">Saiba Mais</a>
+                    </div>
+                </article>
+
+                <article class="card" data-nome="pacote vacinas" data-preco="180,00">
+                    <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=400&q=80" alt="Vacinação">
+                    <div class="card-body">
+                        <span class="card-tag">📍 Vacinas</span>
+                        <h3>Pacote Vacinas</h3>
+                        <p class="card-details">V10 + Antirrábica</p>
+                        <div class="card-price-row">
+                            <span class="price">R$ 180,00</span>
+                            <div class="rating">
+                                <input type="radio" id="star5-4" name="rate4" value="5" onclick="confirmarAvaliacao(this)"><label for="star5-4">★</label>
+                                <input type="radio" id="star4-4" name="rate4" value="4" onclick="confirmarAvaliacao(this)"><label for="star4-4">★</label>
+                                <input type="radio" id="star3-4" name="rate4" value="3" onclick="confirmarAvaliacao(this)"><label for="star3-4">★</label>
+                                <input type="radio" id="star2-4" name="rate4" value="2" onclick="confirmarAvaliacao(this)"><label for="star2-4">★</label>
+                                <input type="radio" id="star1-4" name="rate4" value="1" onclick="confirmarAvaliacao(this)"><label for="star1-4">★</label>
+                            </div>
+                        </div>
+                        <a href="produto.html" class="btn">Saiba Mais</a>
+                    </div>
+                </article>
+
+                <article class="card" data-nome="adestramento" data-preco="320,00">
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=400&q=80" alt="Adestramento">
+                    <div class="card-body">
+                        <span class="card-tag">📍 Treino</span>
+                        <h3>Adestramento</h3>
+                        <p class="card-details">4 Sessões Práticas</p>
+                        <div class="card-price-row">
+                            <span class="price">R$ 320,00</span>
+                            <div class="rating">
+                                <input type="radio" id="star5-5" name="rate5" value="5" onclick="confirmarAvaliacao(this)"><label for="star5-5">★</label>
+                                <input type="radio" id="star4-5" name="rate5" value="4" onclick="confirmarAvaliacao(this)"><label for="star4-5">★</label>
+                                <input type="radio" id="star3-5" name="rate5" value="3" onclick="confirmarAvaliacao(this)"><label for="star3-5">★</label>
+                                <input type="radio" id="star2-5" name="rate5" value="2" onclick="confirmarAvaliacao(this)"><label for="star2-5">★</label>
+                                <input type="radio" id="star1-5" name="rate5" value="1" onclick="confirmarAvaliacao(this)"><label for="star1-5">★</label>
+                            </div>
+                        </div>
+                        <a href="produto.html" class="btn">Saiba Mais</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Confirmação Personalizado (Sem o padrão feio do navegador) -->
+    <div id="modal-avaliacao" class="modal-fundo">
+        <div class="modal-caixa">
+            <p id="modal-texto"></p>
+            <div class="modal-botoes">
+                <button type="button" id="btn-sim" class="btn-modal">Sim</button>
+                <button type="button" id="btn-cancelar" class="btn-modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mensagem de Agradecimento Automática (Toast sem botão OK) -->
+    <div id="toast-agradecimento" class="toast-feedback">
+        Seu pet agradece seu feedback!
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div style="font-weight: bold; font-size: 0.95rem;">🐾 PetCare</div>
+            <p>A PetCare é uma clínica e pet shop dedicada à saúde, bem-estar e alegria do seu animal de estimação.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook" title="Facebook">🌐</a>
+                <a href="#" aria-label="Instagram" title="Instagram">📸</a>
+                <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
+            </div>
+        </div>
+        <p>&copy; 2026 PetCare. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function filtrarCards() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                let nome = card.getAttribute('data-nome');
+                let preco = card.getAttribute('data-preco');
+
+                if (nome.includes(input) || preco.includes(input)) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        let radioAtual = null;
+        let timerAgradecimento = null;
+
+        const modal = document.getElementById('modal-avaliacao');
+        const modalTexto = document.getElementById('modal-texto');
+        const btnSim = document.getElementById('btn-sim');
+        const btnCancelar = document.getElementById('btn-cancelar');
+        const toast = document.getElementById('toast-agradecimento');
+
+        function confirmarAvaliacao(radio) {
+            radioAtual = radio;
+            const nota = radio.value;
+            // Remove o (s) e aplica singular/plural dinamicamente
+            const palavraEstrela = nota === "1" ? "estrela" : "estrelas";
+
+            modalTexto.textContent = `Você deseja avaliar este serviço com ${nota} ${palavraEstrela}?`;
+            modal.style.display = "flex";
+        }
+
+        btnSim.onclick = function() {
+            modal.style.display = "none";
+            
+            toast.style.display = "block";
+            clearTimeout(timerAgradecimento);
+            timerAgradecimento = setTimeout(() => {
+                toast.style.display = "none";
+            }, 3000);
+        };
+
+        btnCancelar.onclick = function() {
+            modal.style.display = "none";
+            if (radioAtual) {
+                radioAtual.checked = false;
+            }
+        };
+    </script>
+</body>
+</html>
